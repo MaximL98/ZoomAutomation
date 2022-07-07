@@ -1,0 +1,20 @@
+Sunday
+Link:
+www.google.com
+StartTime:
+08:30:00
+EndTime:
+10:25:00
+
+Thursday
+Link:
+www.google.com
+StartTime:
+18:16:30
+EndTime:
+18:17:10
+
+
+
+בעזרת הקובץ להדפיס למשתמש איזה יום היום כמה הרצאות יש לו שמות ההרצאות
+לסדר יותר את קריאת הקובץ לתת פנקציות
