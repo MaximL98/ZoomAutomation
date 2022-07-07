@@ -15,6 +15,6 @@ EndTime:
 18:17:10
 
 
-
-בעזרת הקובץ להדפיס למשתמש איזה יום היום כמה הרצאות יש לו שמות ההרצאות
-לסדר יותר את קריאת הקובץ לתת פנקציות
+TODO
+with the help of the file, return to user: number of lecture he have today and the names of the lectures
+also add more function to ReadFile, for easier future work
