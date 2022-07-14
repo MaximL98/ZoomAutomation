@@ -5,6 +5,10 @@ import calendar
 # function that reads a given file
 def read_file():
     flag = 0
+    # 3 arrays to store all the information from the file
+    links = []
+    start_times = []
+    end_times = []
     # getting the current day name
     curr_date = date.today()
     curr_date = calendar.day_name[curr_date.weekday()]
@@ -17,27 +21,32 @@ def read_file():
                 for lines in file:
                     # getting the link of the Zoom call
                     if lines.startswith("Link:"):
-                        link = file.readline()
-                        link = link.strip('\n')
-                    # getting the starting time of the Zoom call
+                        links.append(file.readline().strip('\n'))
+                        # getting the starting time of the Zoom call
                     if lines.startswith("StartTime:"):
-                        start = file.readline()
-                        start = start.strip('\n')
+                        start_times.append(file.readline().strip('\n'))
                     # getting the end time of the Zoom call
                     if lines.startswith("EndTime:"):
-                        end = file.readline()
-                        end = end.strip('\n')
+                        end_times.append(file.readline().strip('\n'))
+        # if on current day user did not input any lectures, close program
         if not flag:
             print("No Lectures on " + curr_date)
             return None, None, None
+    # storing the amount of lecture today
+    count = len(links)
     # closing the file
     file.close()
+    # printing information for user
+    print_info(curr_date, count, start_times[0], end_times[len(end_times) - 1])
     # returning all the values needed from the file
-    return link, start, end
+    return links, start_times, end_times
 
-# TODO
-# def count_lec():
-# count = 0
-# with open('zoom_lec.txt', 'r') as file:
-# for line in file:
-# if(line.startswith())
+
+# information printing function, giving user more details about his day
+def print_info(curr_date, lec_count, start, end):
+    print("Hello, Today is " + curr_date)
+    print("Today you have", lec_count, "lecture")
+    print("first lecture starting at " + start)
+    print("last lecture ending at " + end)
+    print("hopefully all lecture gonna be opened and recorded without problems")
+    print("Good Luck, Enjoy!")
