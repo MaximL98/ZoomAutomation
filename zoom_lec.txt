@@ -1,3 +1,5 @@
+# example of how the text file should look
+
 Sunday
 Link:
 www.google.com
