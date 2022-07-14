@@ -1,6 +1,18 @@
+# the file should look similar to this.
+# <> means user input
+
+<day of the week>
+Link:
+<lectures link>
+StartTime:
+<lecture starting time>
+EndTime:
+<lecture ending time>
+
 # example of how the text file should look
 
 Sunday
+
 Link:
 www.google.com
 StartTime:
@@ -9,12 +21,14 @@ EndTime:
 10:25:00
 
 Thursday
+
 Link:
 www.google.com
 StartTime:
-11:17:00
+14:24:00
 EndTime:
-11:17:45
+14:52:00
+
 Link:
 www.youtube.com
 StartTime:
