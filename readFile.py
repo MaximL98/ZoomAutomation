@@ -37,7 +37,7 @@ def read_file():
     # closing the file
     file.close()
     # printing information for user
-    print_info(curr_date, count, start_times[0], end_times[len(end_times) - 1])
+    print_info(curr_date, count, start_times[0], max(end_times))
     # returning all the values needed from the file
     return links, start_times, end_times
 
