@@ -10,11 +10,14 @@ Thursday
 Link:
 www.google.com
 StartTime:
-18:16:30
+11:17:00
 EndTime:
-18:17:10
+11:17:45
+Link:
+www.youtube.com
+StartTime:
+11:18:10
+EndTime:
+11:18:50
 
 
-TODO
-with the help of the file, return to user: number of lecture he have today and the names of the lectures
-also add more function to ReadFile, for easier future work
