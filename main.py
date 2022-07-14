@@ -1,5 +1,5 @@
 from readFile import read_file
-from openLink import check_time, end_recording
+from openLink import check_time, end_recording, finish
 from obsAutomation import obs_start, obs_end, obs_connection
 
 
@@ -16,11 +16,16 @@ def main():
         print("Bad text file input")
         print("Make sure every link has it start time and end time")
         return
+    # getting the time of the last lecture
+    last_end = max(ends)
+
     # in a loop run check_time and end_recording to open OBS and record the lectures on user given times and links
     for i in range(len(links)):
+        # if current time is past last lecture time, finish program
+        finish(last_end)
         # opens OBS and loggings to obs software to run commands
         ws = obs_connection()
-        if check_time(links[i], starts[i]):
+        if check_time(links[i], starts[i], ends[i]): # added ends
             # connecting to OBS and starts recording
             obs_start(ws)
         if end_recording(ends[i]):
