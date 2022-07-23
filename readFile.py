@@ -45,7 +45,7 @@ def read_file():
 # information printing function, giving user more details about his day
 def print_info(curr_date, lec_count, start, end):
     print("Hello, Today is " + curr_date)
-    print("Today you have", lec_count, "lecture")
+    print("Today you have", lec_count, "lectures")
     print("first lecture starting at " + start)
     print("last lecture ending at " + end)
     print("hopefully all lecture gonna be opened and recorded without problems")
