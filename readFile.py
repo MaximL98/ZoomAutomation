@@ -48,5 +48,5 @@ def print_info(curr_date, lec_count, start, end):
     print("Today you have", lec_count, "lectures")
     print("first lecture starting at " + start)
     print("last lecture ending at " + end)
-    print("hopefully all lecture gonna be opened and recorded without problems")
+    print("hopefully all lecture gonna be opened and recorded without problems.")
     print("Good Luck, Enjoy!")
