@@ -9,12 +9,12 @@ def main():
     links, starts, ends = read_file()
     # if there is no link or lecture start or end time program ends
     if (links or starts or ends) is None:
-        print("Wrong input for lecture link or start/end time")
-        print("Please make sure the text file contains all the needed information")
+        print("Wrong input for lecture link or start/end time.")
+        print("Please make sure the text file contains all the needed information.")
         return
     if not (len(links) == len(starts) == len(ends)):
-        print("Bad text file input")
-        print("Make sure every link has it start time and end time")
+        print("Bad text file input.")
+        print("Make sure every link has it start time and end time.")
         return
     # getting the time of the last lecture
     last_end = max(ends)
