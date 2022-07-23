@@ -1,3 +1,4 @@
+from tests import have_internet
 from readFile import read_file
 from openLink import check_time, end_recording, finish
 from obsAutomation import obs_start, obs_end, obs_connection
@@ -5,6 +6,9 @@ from obsAutomation import obs_start, obs_end, obs_connection
 
 # main function to call all others functions
 def main():
+    # check if there is internet connection
+    if not have_internet():
+        print("There is no internet connection! cant run program!")
     # getting the link, time start of the lecture and end time from file
     links, starts, ends = read_file()
     # if there is no link or lecture start or end time program ends
